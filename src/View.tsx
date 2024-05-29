@@ -19,12 +19,6 @@ export default function View() {
       navigator.mediaDevices
         .getUserMedia({ video: {
           facingMode: "environment",
-          width: {
-            ideal: 3840
-          },
-          height:{
-            ideal: 2160
-          }
         }, audio: false,  })
         .then((stream: MediaStream) => {
           peer.call(peerId, stream);
