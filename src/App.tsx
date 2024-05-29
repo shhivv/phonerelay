@@ -4,7 +4,7 @@ import Peer from "peerjs";
 import { useEffect, useState } from "react";
 
 function App() {
-  const id = nanoid(10);
+  const id = nanoid(8).toUpperCase();
   const [streamEnabled, setStreamEnabled] = useState(false);
 
   useEffect(() => {

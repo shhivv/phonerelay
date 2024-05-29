@@ -7,7 +7,7 @@ export default function View() {
   const { peerId } = useLoaderData() as { peerId: string };
 
   useEffect(() => {
-    const peer = new Peer(nanoid(10), {
+    const peer = new Peer(nanoid(8).toUpperCase(), {
       debug: 3,
     });
 
