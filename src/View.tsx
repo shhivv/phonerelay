@@ -17,7 +17,9 @@ export default function View() {
 
     peer.on("open", () => {
       navigator.mediaDevices
-        .getUserMedia({ video: true, audio: false })
+        .getUserMedia({ video: {
+          facingMode: "environment"
+        }, audio: false,  })
         .then((stream: MediaStream) => {
           peer.call(peerId, stream);
         })
